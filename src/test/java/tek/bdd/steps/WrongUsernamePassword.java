@@ -1,16 +1,9 @@
 package tek.bdd.steps;
-
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import tek.bdd.pages.HomePage;
 import tek.bdd.pages.SignInPage;
 import tek.bdd.utility.SeleniumUtility;
-
 public class WrongUsernamePassword extends SeleniumUtility {
-
     @Then("validate user is in sign in page")
     public void validateSignInPage() {
         String pageSubTitle = getElementText(SignInPage.PAGE_SUBTITLE);
