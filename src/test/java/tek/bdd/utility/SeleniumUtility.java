@@ -8,21 +8,27 @@ import tek.bdd.base.BaseSetup;
 import java.time.Duration;
 
 public class SeleniumUtility extends BaseSetup {
-    private WebDriverWait getWait(){
-        return new WebDriverWait(getDriver(),Duration.ofSeconds(20));
+    private WebDriverWait getWait() {
+        return new WebDriverWait(getDriver(), Duration.ofSeconds(20));
     }
-    private WebElement waitForVisibility(By locator){
+    private WebElement waitForVisibility(By locator) {
         return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
     //create a method to click on a given locator
-    public void clickToElement(By locator){
+    public void clickToElement(By locator) {
         getWait().until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
-    public  void sendText(By locator, String value){
+    public void sendText(By locator, String value) {
         waitForVisibility(locator).sendKeys(value);
     }
     // create method for getting the text of a locator
-    public String getElementText(By locator){
-    return waitForVisibility(locator).getText();
+    public String getElementText(By locator) {
+        return waitForVisibility(locator).getText();
+    }
+    public boolean isElementEnabled(By locator) {
+        return waitForVisibility(locator).isEnabled();
+    }
+    public boolean isElementDisplayed(By locator){
+        return waitForVisibility(locator).isDisplayed();
     }
 }
