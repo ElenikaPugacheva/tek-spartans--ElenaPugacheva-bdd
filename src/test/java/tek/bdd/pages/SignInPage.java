@@ -5,7 +5,7 @@ public class SignInPage {
     public static final By EMAIL_INPUT = By.name("email");
     public static final By PASSWORD_INPUT = By.name("password");
     public static final By LOGIN_BUTTON = By.id("loginBtn");
-    public static final By ERROR_MESSAGE = By.linkText("wrong username or password");
+    public static final By ERROR_MESSAGE = By.className("error");
     public static final By CREATE_ACCOUNT_BUTTON = By.id("newAccountBtn");
     public static final By WANT_TO_SELL_SOMETHING = By.id("newCompanyAccount");
 }
