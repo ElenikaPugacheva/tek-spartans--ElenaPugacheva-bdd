@@ -6,8 +6,8 @@ public class HomePage {
     public static final By SEARCH_INPUT = By.id("searchInput");
     public static final By SEARCH_BUTTON = By.id("searchBtn");
     // Main buttons
-    public static final By SIGN_IN_LINK = By.id("signinLink");
-        public static final By CART_BUTTON = By.id("cartBtn");
+    public static final By SING_IN_LINK = By.id("signinLink");
+    public static final By CART_BUTTON = By.id("cartBtn");
     public static final By TEST_SELENIUM = By.linkText("Test Selenium");
     // After sign in Main Page
     public static final By ACCOUNT_LINK = By.id("accountLink");
