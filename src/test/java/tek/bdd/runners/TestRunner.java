@@ -4,7 +4,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:features/CreateNewAccount.feature",
+        features = "classpath:features",
         glue = "tek.bdd.steps",
         dryRun = false
 )
