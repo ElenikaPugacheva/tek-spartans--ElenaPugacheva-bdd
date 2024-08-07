@@ -1,6 +1,13 @@
 package tek.bdd.pages;
 import org.openqa.selenium.By;
 public class AccountPage {
+    // in your profile page
+    public static final By PROFILE_PAGE_TITLE = By.className("account__personal-title");
+    public static final By PROFILE_EMAIL_TEXT = By.className("account__information-email");
+
+
+
+    public static final By PROFILE_EMAIl = By.cssSelector("h1.account__information-email");
     // personal information
     public static final By NAME = By.id("nameInput");
     public static final By PHONE_NUMBER_INPUT = By.id("personalPhoneInput");

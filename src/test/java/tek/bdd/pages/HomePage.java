@@ -1,7 +1,7 @@
 package tek.bdd.pages;
 import org.openqa.selenium.By;
 public class HomePage {
-   // public static final By TEKSCHOOL = By.className("top-nav__logo active");
+    public static final By TEKSCHOOL = By.cssSelector(".top-nav__logo.active");
     // Search
     public static final By SEARCH_INPUT = By.id("searchInput");
     public static final By SEARCH_BUTTON = By.id("searchBtn");

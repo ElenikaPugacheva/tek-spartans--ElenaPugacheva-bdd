@@ -31,4 +31,7 @@ public class SeleniumUtility extends BaseSetup {
     public boolean isElementDisplayed(By locator){
         return waitForVisibility(locator).isDisplayed();
     }
+    protected String getPageTitle() {
+        return getDriver().getTitle();
+    }
 }

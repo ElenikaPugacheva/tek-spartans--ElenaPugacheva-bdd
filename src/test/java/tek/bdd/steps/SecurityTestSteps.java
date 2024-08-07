@@ -7,19 +7,19 @@ import tek.bdd.pages.SignInPage;
 import tek.bdd.utility.SeleniumUtility;
 public class SecurityTestSteps extends SeleniumUtility {
 
-    @When("user click on sign in link")
-    public void user_click_on_sign_in_link() {
+    @When("click on sign in link")
+    public void clickOnSignInLink() {
         clickOnElement(HomePage.SIGN_IN_LINK);
     }
 
-    @Then("validate user is in sign in page")
-    public void validate_user_is_in_sign_in_page() {
+    @Then("validate is in sign in page")
+    public void validateIsInSignInPage() {
         String pageSubTitle = getElementText(SignInPage.PAGE_SUBTITLE);
         Assert.assertEquals("Sign in", pageSubTitle);
     }
 
-    @When("user enter username and password and click on login")
-    public void user_enter_username_and_password_and_click_on_login() {
+    @When("enter username and password and click on login")
+    public void enterUsernameAndPasswordAndClickOnLogin() {
         sendText(SignInPage.EMAIL_INPUT, "elenavin5@gmail.com");
         sendText(SignInPage.PASSWORD_INPUT, "Mona3yo#");
         clickOnElement(SignInPage.LOGIN_BUTTON);
@@ -32,8 +32,8 @@ public class SecurityTestSteps extends SeleniumUtility {
         clickOnElement(SignInPage.LOGIN_BUTTON);
     }
 
-    @Then("user should be able to see account link")
-    public void user_should_be_able_to_see_account_link() {
+    @Then("should be able to see account link")
+    public void shouldBeAbleToSeeAccountLink() {
         boolean isAccountDisplayed = isElementDisplayed(HomePage.ACCOUNT_LINK);
         Assert.assertTrue(isAccountDisplayed);
     }
