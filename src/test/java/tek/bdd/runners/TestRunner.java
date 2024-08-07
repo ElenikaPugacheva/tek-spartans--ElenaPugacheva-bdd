@@ -6,7 +6,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "classpath:features",
         glue = "tek.bdd.steps",
-        dryRun = false
+        dryRun = false, // set to true to scan feature for unimplemented steps
+        tags = "@UserStory1",
+        plugin = {
+                "html:target/cucumber_report/index.html"
+        }
 )
 public class TestRunner {
 }
+//Running multiple tags => tags = "@Smoke or @Regression"

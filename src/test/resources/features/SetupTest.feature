@@ -1,7 +1,8 @@
 Feature: This feature to setup framework
+  @Smoke
   Scenario: Validate top left corner logo
     Then validate top left corner is TEKSCHOOL
-
+  @Smoke
     Scenario: Validate top left logo and sign in button is enabled
     Then validate top left corner is TEKSCHOOL
     Then validate Sign in button is Enabled
