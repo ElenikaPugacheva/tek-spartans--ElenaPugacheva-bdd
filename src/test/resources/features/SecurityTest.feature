@@ -10,7 +10,7 @@ Feature: Security tests scenarios
     When user click on sign in link
     Then validate user is in sign in page
     When user enter "<username>" and "<password>" and click on login
-    Then should see error message "wrong username or password"
+    Then user should see error message "wrong username or password"
     Examples:
       | username            | password      |
       | wrong@gmail.com     | Mona3yo#      |

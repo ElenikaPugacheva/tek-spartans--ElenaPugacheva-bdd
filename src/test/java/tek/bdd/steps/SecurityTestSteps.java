@@ -38,7 +38,7 @@ public class SecurityTestSteps extends SeleniumUtility {
         Assert.assertTrue(isAccountDisplayed);
     }
 
-    @Then("should see error message {string}")
+    @Then("user should see error message {string}")
     public void shouldSeeErrorMessage(String expectedErrorMessage) {
         String actualErrorMessage = getElementText(SignInPage.ERROR_MESSAGE);
         Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
