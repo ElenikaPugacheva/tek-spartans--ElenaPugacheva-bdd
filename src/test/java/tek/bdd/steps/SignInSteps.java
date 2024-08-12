@@ -12,10 +12,10 @@ public class SignInSteps extends SeleniumUtility {
     public void userClickOnSignInLink() {
         clickOnElement(HomePage.SIGN_IN_LINK);
     }
-    @Then("validate user is in {string} page")
-    public void validateUserIsInPage(String expectedPageTitle) {
-        String actualPageTitle = getPageTitle();
-        Assert.assertEquals(expectedPageTitle, actualPageTitle);
+    @Then("validate user is in  sign in page")
+    public void validateUserIsInPage() {
+        String pageTitle = getElementText(SignInPage.PAGE_SUBTITLE);
+        Assert.assertEquals("Sign in", pageTitle);
     }
     @Then("user should be able to see {string} link")
     public void userShouldBeAbleToSeeLink(String expectedLinkText) {

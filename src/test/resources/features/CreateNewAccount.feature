@@ -18,4 +18,4 @@ Feature: Create new account functionality
   Scenario: Create account with existing email
     When user enter "ElenaV" "elenavin5@gmail.com" and "Mona3yo#"
     When user click on "Sign Up" button
-    Then user should see error message "this email is already exist"
+    Then user should see error message "this email is already exist, please use another email address"

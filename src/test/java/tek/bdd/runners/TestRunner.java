@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
         features = "classpath:features",
         glue = "tek.bdd.steps",
         dryRun = false, // set to true to scan feature for unimplemented steps
-        tags = "@UserStory1",
+        tags = "@UserStory5",
         plugin = {
                 "html:target/cucumber_report/index.html"
         }

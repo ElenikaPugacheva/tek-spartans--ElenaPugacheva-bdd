@@ -13,33 +13,28 @@ public class SecurityTestSteps extends SeleniumUtility {
     public void clickOnSignInLink() {
         clickOnElement(HomePage.SIGN_IN_LINK);
     }
-
     @Then("validate is in sign in page")
     public void validateIsInSignInPage() {
         String pageSubTitle = getElementText(SignInPage.PAGE_SUBTITLE);
         Assert.assertEquals("Sign in", pageSubTitle);
     }
-
-    @When("input the validate username and password and click on login")
-    public void enterUsernameAndPasswordAndClickOnLogin() {
-        sendText(SignInPage.EMAIL_INPUT, "elenavin5@gmail.com");
-        sendText(SignInPage.PASSWORD_INPUT, "Mona3yo#");
+    @When("input the validate {string} and {string} and click on login")
+    public void enterUsernameAndPasswordAndClickOnLogin(String userName, String password) {
+        sendText(SignInPage.EMAIL_INPUT, userName);
+        sendText(SignInPage.PASSWORD_INPUT, password);
         clickOnElement(SignInPage.LOGIN_BUTTON);
     }
-
     @When("user enter {string} and {string} and click on login")
     public void userEnterUsernameAndPassword(String username, String password) {
         sendText(SignInPage.EMAIL_INPUT, username);
         sendText(SignInPage.PASSWORD_INPUT, password);
         clickOnElement(SignInPage.LOGIN_BUTTON);
     }
-
     @Then("user should be able to see account link")
     public void shouldBeAbleToSeeAccountLink() {
         boolean isAccountDisplayed = isElementDisplayed(HomePage.ACCOUNT_LINK);
         Assert.assertTrue(isAccountDisplayed);
     }
-
     @Then("user should see error message {string}")
     public void shouldSeeErrorMessage(String expectedErrorMessage) {
         String actualErrorMessage = getElementText(SignInPage.ERROR_MESSAGE);
