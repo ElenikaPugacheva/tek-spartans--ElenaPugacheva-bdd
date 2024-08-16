@@ -36,6 +36,9 @@ public class SeleniumUtility extends BaseSetup {
         return waitForVisibility(locator)
                 .isEnabled();
     }
+    public void clickOnElement (WebElement element){
+        getWait().until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
     public boolean isElementDisplayed(By locator) {
         LOGGER.info("Checking element is Displayed {}", locator);
         return waitForVisibility(locator)
@@ -48,4 +51,5 @@ public class SeleniumUtility extends BaseSetup {
     public List<WebElement> getElements(By locator) {
         return getWait().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
     }
+
 }

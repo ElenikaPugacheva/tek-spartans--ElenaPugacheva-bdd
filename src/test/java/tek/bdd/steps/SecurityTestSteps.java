@@ -9,6 +9,8 @@ import tek.bdd.utility.SeleniumUtility;
 
 public class SecurityTestSteps extends SeleniumUtility {
 
+    private static String currentPassword = "Mona3yo#";
+
     @When("click on SignIn button")
     public void clickOnSignInLink() {
         clickOnElement(HomePage.SIGN_IN_LINK);

@@ -4,6 +4,9 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import tek.bdd.utility.SeleniumUtility;
 public class HooksSteps extends SeleniumUtility {
+
+    private static String currentPassword; // No default value
+
     @Before
     public void befoeEachScenaio(){
         setupBrowser();
@@ -16,4 +19,11 @@ public class HooksSteps extends SeleniumUtility {
         }
         quitBrowser();
     }
+   /* public static String getCurrentPassword() {
+        return currentPassword;
+    }
+
+    public static void setCurrentPassword(String newPassword) {
+        currentPassword = newPassword;
+    }*/
 }

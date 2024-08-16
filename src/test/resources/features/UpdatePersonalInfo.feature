@@ -1,6 +1,7 @@
+@Smoke
 Feature: Update Account profile feature
 
-    Background: Login to to account and setups
+    Background: Login to account and setups
         Given user click on "Sign in" link
         Then validate user is in sign in page
         When user enter "elenavin5@gmail.com" on "Email" field
@@ -21,4 +22,17 @@ Feature: Update Account profile feature
         When user enter "Mona" on "Name" field
         When user enter "4325688555" on "Phone Number" field
         When user click on "Update" button
+        Then validate Toast Displayed
+
+    @UserStory6
+    Scenario: Change Account Password
+        When user enter "Mona3yo#" on "Previous Password" field
+        Then user enter "Monica3yo#" on "New Password" field
+        Then user enter "Monica3yo#" on "Confirm Password" field
+        When user click on "Change Password" button
+        Then validate Toast Displayed
+        When user enter "Monica3yo#" on "Previous Password" field
+        Then user enter "Mona3yo#" on "New Password" field
+        Then user enter "Mona3yo#" on "Confirm Password" field
+        When user click on "Change Password" button
         Then validate Toast Displayed

@@ -5,6 +5,14 @@ public class AccountPage {
     public static final By PROFILE_PAGE_TITLE = By.className("account__personal-title");
     public static final By PROFILE_EMAIL_TEXT = By.className("account__information-email");
     public static final By TOAST_BOX = By.className("Toastify__toast-body");
+    public static final By PROFILE_NAME_TEXT = By.className("account__information-username");
+
+    // password information
+    public static final By PREVIOUS_PASSWORD_INPUT = By.id("previousPasswordInput");
+    public static final By NEW_PASSWORD_INPUT = By.id("newPasswordInput");
+    public static final By CONFIRM_PASSWORD_INPUT = By.id("confirmPasswordInput");
+    public static final By CHANGE_PASSWORD_BTN = By.id("credentialsSubmitBtn");
+
 
 
 
@@ -14,11 +22,7 @@ public class AccountPage {
     public static final By PHONE_NUMBER_INPUT = By.id("personalPhoneInput");
     public static final By EMAIL_INPUT = By.id("emailInput");
     public static final By UPDATE_PERSONAL_INFO_BTN = By.id("personalUpdateBtn");
-    // password information
-    public static final By PREVIOUS_PASSWORD_INPUT = By.id("previousPasswordInput");
-    public static final By NEW_PASSWORD_INPUT = By.id("newPasswordInput");
-    public static final By CONFIRM_PASSWORD_INPUT = By.id("confirmPasswordInput");
-    public static final By CHANGE_PASSWORD_BTN = By.id("credentialsSubmitBtn");
+
     // add debit or credit cart
     public static final By CARD_NUMBER_INPUT = By.id("cardNumberInput");
     public static final By NAME_ON_CARD_INPUT = By.id("nameOnCardInput");
